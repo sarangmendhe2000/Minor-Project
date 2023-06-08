@@ -1,0 +1,53 @@
+<%- include('../partition/header.ejs') %>
+
+<section class="display">
+    <div class="container-fluid">
+      <div class="container mt-5">
+        <div class="row justify-content-center mt-5 py-5 px-5">
+          <div class="col-md-12 shadow-lg display-box px-5">
+            <h1 class="text-center mt-3">Registration Details</h1>
+            <table class="table text-center mt-5">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Course</th>
+                  
+                  <th scope="col">Status</th>
+                  <th scope="col">Comment</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% var i = 1 %>       
+                <% data.forEach((a)=>{ %>
+                
+                <tr>
+                <th scope="row"><%= i++ %></th>
+                <td><img src="/upload/<%= a.image %>" class="img"></td>
+                <td><%= a.name %></td>
+                <td><%= a.email   %></td>
+                <td><%= a.phone   %></td>
+                <td><%= a.course %></td>
+                <td><%= a.status %></td>
+                <td><%= a.comment %></td>
+                <td>
+                  <a href="/view_detail" class="btn">View</a>
+                  <a href="/edit_detail/<%= a._id %>" class="btn">Edit</a>
+                </td>
+                </tr>
+                <%  }) %>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<%- include('../partition/footer.ejs') %>

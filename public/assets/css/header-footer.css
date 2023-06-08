@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.header .navbar {
+    background-color:#f9f7f1;
+}
+.header h1{
+	color: #cd2122;
+	font-size: 38px;
+}
+.header .nav-item {
+    margin: 0 3px;
+}
+.header .nav-item .nav-link{
+    font-size:17px;
+    font-weight: 500;
+    color:#cd2122;
+    line-height: 1;
+    letter-spacing: 1px;
+
+}
+.header .btn{
+    text-decoration: none;
+    color: white !important;
+    background-color: #cd2122; 
+    border-color: #cd2122;
+}
+.header i{
+    font-size: 20px;
+    }
+.header .nav-item .nav-link.active{
+    color:#fcc641;
+}
+
+
+/*footer*/
+
+
+.contact{
+    background-color: #cd2122;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.contact img{
+    width: 65%;
+    margin-top: 10px;
+}
+.contact h1{
+    color: white;
+    font-family: prague;
+    margin-top: 20px;
+
+    font-size:50px;
+    letter-spacing:2px;
+    font-weight: 500;
+}
+.contact h3{
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact i{
+    color: #ffffffb3; 
+    font-size: 33px;
+    padding-right: 11px;
+    margin-bottom: 20px;
+}
+.contact a{
+    text-decoration: none;
+    color: #ffffffb3;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+}
+.contact p{
+    color: #ffffffb3;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+    margin-right: 33px;
+
+    margin-top:5px;
+    margin-bottom:1rem;
+    font-weight: 300;
+    line-height:normal;
+}
+.footer{
+    background-color: black;
+}
+.footer p{
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    font-family: revert;
+}
+
+
+/*--------------responsive css------------------*/
+
+@media(max-width: 1300px){
+
+    
+}
+
+@media(max-width: 1230px){
+
+    
+}
+@media(max-width: 1070px){
+
+    /*navbar*/
+   
+.header .nav-item {
+    margin: 0 3px;
+}
+.header .nav-item .nav-link{
+    font-size:16px;
+    letter-spacing: 0px;
+}
+/*footer*/
+.contact img{
+    width: 60%;
+}
+    /*banner*/
+    /*.carousel-caption{
+        bottom: 1.25rem;
+    }*/
+}
+
+
+@media(max-width: 992.5px){
+
+    /*custom css*/
+    
+
+    /*navbar*/
+    .header .navbar{
+        background: #000000d4;
+    }
+    .header .navbar-toggler:focus{
+        box-shadow: none;
+    }
+    .header .menu-navbar-nav{
+        text-align: center;
+    }
+    .header .nav-item .nav-link{
+        margin-top: 15px;
+    }
+    .header .fas{
+        color: #cd2122;
+    }
+
+    /*footer*/
+    .contact img{
+    width: 50%;
+    margin-top: 10px;
+    }
+    .contact h1{
+        margin-top: 20px;
+        font-size: 40px;
+    }
+    .contact h3{
+        font-size: 16px;
+    }
+    .contact i{ 
+        font-size: 25px;
+        padding-right: 5px;
+        margin-bottom:10px ;
+    }
+    .contact a{
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+    .contact p{
+        font-size: 14px;
+        letter-spacing:1px;
+    }
+}
+@media(max-width: 767px){
+
+    /*navbar*/
+    .header h1{
+    font-size: 30px;
+    }
+    
+    /*footer*/
+    .contact img{
+    width: 50%;
+    }
+    .contact h1{
+        margin-top: 40px;
+        font-size: 40px;
+    }
+    .contact h3{
+        font-size: 16px;
+    }
+    .contact i{ 
+        font-size: 25px;
+        padding-right: 5px;
+        margin-bottom:10px ;
+    }
+    .contact a{
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+    .contact p{
+        font-size: 14px;
+        letter-spacing:1px;
+    }
+}
+@media(max-width: 610px){
+
+    /*custom css*/
+    
+
+    /*footer*/
+    .contact img{
+    width: 40%;
+    margin-top: 10px;
+    }
+    .contact h1{
+        margin-top: 40px;
+        font-size: 40px;
+    }
+    .contact h3{
+        font-size: 16px;
+    }
+    .contact i{ 
+        font-size: 25px;
+        padding-right: 5px;
+        margin-bottom:10px ;
+    }
+    .contact a{
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+    .contact p{
+        font-size: 14px;
+        letter-spacing:1px;
+    }
+}

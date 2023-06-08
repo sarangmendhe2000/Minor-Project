@@ -1,0 +1,46 @@
+<%- include('../partition/admin_header.ejs') %>
+
+<section class="display">
+  <div class="container-fluid mt-5">
+    <div class="container mt-5">
+      <div class="row justify-content-center mt-5 py-5">
+        <div class="col-md-12 shadow-lg display-box">
+          <h1 class="text-center text-danger mt-3">List of Rejected Applications</h1>
+          <table class="table text-center mt-5">
+            <thead>
+              <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Course</th>
+                <th scope="col">Status</th>
+                <th scope="col">Comment</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+                           
+              <% data.forEach((a)=>{ %>
+                <% if(a.status=="Rejected") { %>
+              <tr>
+              <td><img src="/upload/<%= a.image %>" class="img"></td>
+              <td><%= a.name %></td>
+              <td><%= a.email   %></td>
+              <td><%= a.phone   %></td>
+              <td><%= a.course %></td>
+              <td><%= a.status %></td>
+              <td><%= a.comment %></td>
+              <td><a href="/admin/application_display/<%= a._id %>"><button class="btn">View</button></a></td>
+              </tr>
+              <%  } %>
+              <%  }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partition/admin_footer.ejs') %>

@@ -1,0 +1,91 @@
+<%- include('../partition/admin_header.ejs') %>
+
+<section class="display">
+    <div class="container-fluid">
+      <div class="container mt-5">
+        <div class="row justify-content-center mt-5 py-5 px-5">
+          <div class="col-md-8 shadow-lg display-box px-5">
+            <h1 class="text-center text-danger mt-3">Application Details</h1>
+              <table class="table mt-5 ">
+                
+                <tr > 
+                  <th>Image :</th>
+                  <td><img src="/upload/<%= data.image %>" class="img"></td>
+                </tr>
+                <tr>
+                  <th>Name :</th>
+                  <td><%= data.name %></td>
+                </tr>
+                <tr>
+                  <th>Mobile :</th>
+                  <td><%= data.phone %></td>
+                </tr>
+                <tr>
+                  <th>Email :</th>
+                  <td><%= data.email   %></td>
+                </tr> 
+                <tr>
+                  <th>Date of Birth :</th>
+                  <td><%= data.dob   %></td>
+                </tr>
+                <tr>
+                  <th>Gender :</th>
+                  <td><%= data.gender %></td>
+                </tr>
+                <tr>
+                  <th>Address :</th>
+                  <td><%= data.address %></td>
+                </tr>
+                <tr>
+                  <th>Course :</th>
+                  <td><%= data.course %></td>
+                </tr>
+                <tr>
+                  <th>Specialization :</th>
+                  <td><%= data.specialization %></td>
+                </tr>
+                <tr>
+                  <table class="table text-center mt-3">
+                    <thead>
+                      <tr>
+                        <th  style="width: 10%;">Course</th>
+                        <th  style="width: 20%;">Pass Year</th>
+                        <th  style="width: 30%;">School/ College</th>
+                        <th  style="width: 30%;">Board/ University</th>
+                        <th  style="width: 10%;">Percentage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>10th*</td>
+                        <td><%= data.year_10th %></td>
+                        <td><%= data.school_10th %></td>
+                        <td><%= data.board_10th %></td>
+                        <td><%= data.percentage_10th %></td>
+                      </tr>
+                      <tr>
+                        <td>12th*</td>
+                        <td><%= data.year_12th %></td>
+                        <td><%= data.school_12th %></td>
+                        <td><%= data.board_12th %></td>
+                        <td><%= data.percentage_12th %></td>
+                      </tr>
+                      <tr>
+                        <td>Graduation</td>
+                        <td><%= data.graduation_year %></td>
+                        <td><%= data.graduation_school %></td>
+                        <td><%= data.graduation_board %></td>
+                        <td><%= data.graduation_percentage %></td>
+                      </tr>    
+                    </tbody>
+                  </table>
+                </tr>
+              </table>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<%- include('../partition/admin_footer.ejs') %>

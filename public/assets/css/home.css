@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.course{
+	height: 275px;
+}
+.course img{
+	height: 200px;
+}
+.available-course h1{
+	font-size: 40px;
+	color: #cd2122;
+}
+.available-course h2{
+	font-size: 40px;
+	color: white;
+}
+.btn{
+    color: white !important;
+    background-color: #cd2122; 
+    border-color: #cd2122;
+}

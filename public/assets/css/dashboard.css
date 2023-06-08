@@ -1,0 +1,9 @@
+.admin-menu a{
+	color: black;
+	text-decoration: none;
+  	font-size: 20px;
+}
+.admin-menu .active{
+	background-color:  #cd2122;
+	border-color:  #cd2122;;
+}

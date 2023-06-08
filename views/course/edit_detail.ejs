@@ -1,0 +1,202 @@
+<%- include('../partition/header.ejs') %>
+
+<section class="display">
+    <div class="container-fluid">
+      <div class="container mt-5 py-5">
+        <div class="row justify-content-center mt-1">  
+          <div class="col-md-8 mt-5 registration-box shadow-lg">
+            <h1 class="text-center mt-3">Edit Registration Details</h1>
+           
+            <div class="blog-form">
+                <form action="/update_detail/<%= data._id %>" method="post" enctype="multipart/form-data">
+              
+                  <div class="form-row mt-5" style="display: flex;flex-direction: row;flex-wrap: nowrap; justify-content: flex-start;">
+                    <label>Upload Image* : </label>
+                    <input type="file" name="image" required> 
+                    <img src="/upload/<%= data.image %>" style="width: 100px; height:auto">
+                  </div>
+                  <div class="form-group row mt-3">
+                    <div class="form-group mt-3 col-md-6">
+                      
+                      <label>Name :</label>
+                      <input type="text" value="<%= data.name %>" readonly name="name" placeholder="Enter Name*" class="form-control" style="width:80%;" required>
+                    </div>
+                    <div class="form-group mt-3 col-md-6">
+                      <label>Mobile :</label> 
+                      <input type="tel" name="phone" class="form-control" value="<%= data.phone %>" placeholder="Enter Mobile No.*" style="width:80%;" required>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row mt-3">
+                    <div class="form-group mt-3 col-md-6">
+                      <label>E-mail :</label>
+                      <input type="email" value="<%= data.email %>" readonly name="email" class="form-control" placeholder="Enter Email Address*" style="width:80%;" required>
+                    </div> 
+                    <div class="mt-3 col-md-6 form-group">
+                      <label>Date of Birth :</label>
+                      <input type="date" name="dob" class="form-control" value="<%= data.dob %>" style="width: 60%;" required>
+                    </div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label>Gender :</label>
+                    <input type="radio" name="gender" value="male" <%= data.gender='male'? 'checked' : '' %>>Male
+                    <input type="radio" name="gender" value="female" <%= data.gender='female'? 'checked' : '' %>>Female
+                  </div>
+                  <div class="form-group mt-3">
+                    <label>Address :</label>
+                    <textarea name="address" rows="1" cols="40" class="form-control" value="<%= data.address %>" style="width:80%;" required ></textarea>
+                  </div>
+                  <div class=" row mt-3">
+                    <div class="col-md-6">
+                      <div class="form-group mt-3 ">
+                        <label>Course :</label>
+                        <input type="text" class="form-control" readonly value="<%= data.course %>" style="width: 70%;">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group mt-3 ">
+                        <label>Specialization :</label>
+                        <select name="specialization" class="form-control" style="width: 60%;" required>
+                          <option value="">Select Specialization*</option>
+                          <option <%= data.specialization=='CSE'? 'selected' :'' %>>Computer Science And Engineering</option>
+                          <option <%= data.specialization=='CE'? 'selected' :'' %>>Civil Engineering</option>
+                          <option <%= data.specialization=='ME'? 'selected' :'' %>>Mechanical Engineering</option>
+                          <option <%= data.specialization=='AI'? 'selected' :'' %>>Artificial Intelligence</option>
+                          <option <%= data.specialization=='DS'? 'selected' :'' %>>Data Science</option>
+                          <option <%= data.specialization=='IT'? 'selected' :'' %>>Information Technology</option>
+                          <option <%= data.specialization=='EE'? 'selected' :'' %>>Electrical Engineering</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row mt-3">
+                    <table class="table text-center mt-3">
+                      <thead>
+                        <tr>
+                          <th scope="col" style="width: 10%;">Course</th>
+                          <th scope="col" style="width: 15%;">Pass Year</th>
+                          <th scope="col" style="width: 30%;">School/ College</th>
+                          <th scope="col" style="width: 30%;">Board/ University</th>
+                          <th scope="col" style="width: 10%;">Percentage</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>10th*</td>
+                          <td>
+                            <select name="year_10th" class="form-control" required>
+                            <option value="">Year</option>
+                            <option <%= data.year_10th=='2000'? 'selected' :'' %>>2000</option>
+                            <option <%= data.year_10th=='2001'? 'selected' :'' %>>2001</option>
+                            <option <%= data.year_10th=='2002'? 'selected' :'' %>>2002</option>
+                            <option <%= data.year_10th=='2003'? 'selected' :'' %>>2003</option>
+                            <option <%= data.year_10th=='2004'? 'selected' :'' %>>2004</option>
+                            <option <%= data.year_10th=='2005'? 'selected' :'' %>>2005</option>
+                            <option <%= data.year_10th=='2006'? 'selected' :'' %>>2006</option>
+                            <option <%= data.year_10th=='2007'? 'selected' :'' %>>2007</option>
+                            <option <%= data.year_10th=='2008'? 'selected' :'' %>>2008</option>
+                            <option <%= data.year_10th=='2009'? 'selected' :'' %>>2009</option>
+                            <option <%= data.year_10th=='2010'? 'selected' :'' %>>2010</option>
+                            <option <%= data.year_10th=='2011'? 'selected' :'' %>>2011</option>
+                            <option <%= data.year_10th=='2012'? 'selected' :'' %>>2012</option>
+                            <option <%= data.year_10th=='2013'? 'selected' :'' %>>2013</option>
+                            <option <%= data.year_10th=='2014'? 'selected' :'' %>>2014</option>
+                            <option <%= data.year_10th=='2015'? 'selected' :'' %>>2015</option>
+                            <option <%= data.year_10th=='2016'? 'selected' :'' %>>2016</option>
+                            <option <%= data.year_10th=='2017'? 'selected' :'' %>>2017</option>
+                            <option <%= data.year_10th=='2018'? 'selected' :'' %>>2018</option>
+                            <option <%= data.year_10th=='2019'? 'selected' :'' %>>2019</option>
+                            <option <%= data.year_10th=='2020'? 'selected' :'' %>>2020</option>
+                            <option <%= data.year_10th=='2021'? 'selected' :'' %>>2021</option>
+                            <option <%= data.year_10th=='2022'? 'selected' :'' %>>2022</option>
+                            </select>
+                          </td>
+                          <td><input type="text" name="school_10th" value="<%= data.school_10th %>" class="form-control" required></td>
+                          <td><input type="text" name="board_10th" value="<%= data.board_10th %>" class="form-control" required></td>
+                          <td><input type="number" name="percentage_10th" value="<%= data.percentage_10th %>" class="form-control"  required></td>
+                        </tr>
+                        <tr>
+                          <td>12th*</td>
+                          <td>
+                            <select name="year_12th" class="form-control" required>
+                            <option value="">Year</option>
+                            <option <%= data.year_12th=='2000'? 'selected' :'' %>>2000</option>
+                            <option <%= data.year_12th=='2001'? 'selected' :'' %>>2001</option>
+                            <option <%= data.year_12th=='2002'? 'selected' :'' %>>2002</option>
+                            <option <%= data.year_12th=='2003'? 'selected' :'' %>>2003</option>
+                            <option <%= data.year_12th=='2004'? 'selected' :'' %>>2004</option>
+                            <option <%= data.year_12th=='2005'? 'selected' :'' %>>2005</option>
+                            <option <%= data.year_12th=='2006'? 'selected' :'' %>>2006</option>
+                            <option <%= data.year_12th=='2007'? 'selected' :'' %>>2007</option>
+                            <option <%= data.year_12th=='2008'? 'selected' :'' %>>2008</option>
+                            <option <%= data.year_12th=='2009'? 'selected' :'' %>>2009</option>
+                            <option <%= data.year_12th=='2010'? 'selected' :'' %>>2010</option>
+                            <option <%= data.year_12th=='2011'? 'selected' :'' %>>2011</option>
+                            <option <%= data.year_12th=='2012'? 'selected' :'' %>>2012</option>
+                            <option <%= data.year_12th=='2013'? 'selected' :'' %>>2013</option>
+                            <option <%= data.year_12th=='2014'? 'selected' :'' %>>2014</option>
+                            <option <%= data.year_12th=='2015'? 'selected' :'' %>>2015</option>
+                            <option <%= data.year_12th=='2016'? 'selected' :'' %>>2016</option>
+                            <option <%= data.year_12th=='2017'? 'selected' :'' %>>2017</option>
+                            <option <%= data.year_12th=='2018'? 'selected' :'' %>>2018</option>
+                            <option <%= data.year_12th=='2019'? 'selected' :'' %>>2019</option>
+                            <option <%= data.year_12th=='2020'? 'selected' :'' %>>2020</option>
+                            <option <%= data.year_12th=='2021'? 'selected' :'' %>>2021</option>
+                            <option <%= data.year_12th=='2022'? 'selected' :'' %>>2022</option>
+                            </select>
+                          </td>
+                          <td><input type="text" name="school_12th" value="<%= data.school_12th %>" class="form-control" required></td>
+                          <td><input type="text" name="board_12th" value="<%= data.board_12th %>" class="form-control" required></td>
+                          <td><input type="number" name="percentage_12th" value="<%= data.percentage_12th %>" class="form-control" required></td>
+                        </tr>
+                        <tr>
+                          <td>Graduation</td>
+                          <td>
+                            <select name="graduation_year" class="form-control">
+                            <option value="">Year</option>
+                            <option <%= data.graduation_year=='2000'? 'selected' :'' %>>2000</option>
+                            <option <%= data.graduation_year=='2001'? 'selected' :'' %>>2001</option>
+                            <option <%= data.graduation_year=='2002'? 'selected' :'' %>>2002</option>
+                            <option <%= data.graduation_year=='2003'? 'selected' :'' %>>2003</option>
+                            <option <%= data.graduation_year=='2004'? 'selected' :'' %>>2004</option>
+                            <option <%= data.graduation_year=='2005'? 'selected' :'' %>>2005</option>
+                            <option <%= data.graduation_year=='2006'? 'selected' :'' %>>2006</option>
+                            <option <%= data.graduation_year=='2007'? 'selected' :'' %>>2007</option>
+                            <option <%= data.graduation_year=='2008'? 'selected' :'' %>>2008</option>
+                            <option <%= data.graduation_year=='2009'? 'selected' :'' %>>2009</option>
+                            <option <%= data.graduation_year=='2010'? 'selected' :'' %>>2010</option>
+                            <option <%= data.graduation_year=='2011'? 'selected' :'' %>>2011</option>
+                            <option <%= data.graduation_year=='2012'? 'selected' :'' %>>2012</option>
+                            <option <%= data.graduation_year=='2013'? 'selected' :'' %>>2013</option>
+                            <option <%= data.graduation_year=='2014'? 'selected' :'' %>>2014</option>
+                            <option <%= data.graduation_year=='2015'? 'selected' :'' %>>2015</option>
+                            <option <%= data.graduation_year=='2016'? 'selected' :'' %>>2016</option>
+                            <option <%= data.graduation_year=='2017'? 'selected' :'' %>>2017</option>
+                            <option <%= data.graduation_year=='2018'? 'selected' :'' %>>2018</option>
+                            <option <%= data.graduation_year=='2019'? 'selected' :'' %>>2019</option>
+                            <option <%= data.graduation_year=='2020'? 'selected' :'' %>>2020</option>
+                            <option <%= data.graduation_year=='2021'? 'selected' :'' %>>2021</option>
+                            <option <%= data.graduation_year=='2022'? 'selected' :'' %>>2022</option>
+                            </select>
+                          </td>
+                          <td><input type="text" name="graduation_school" value="<%= data.graduation_school %>" class="form-control" ></td>
+                          <td><input type="text" name="graduation_board" value="<%= data.graduation_board %>" class="form-control"></td>
+                          <td><input type="number" name="graduation_percentage" value="<%= data.graduation_percentage %>" class="form-control"></td>
+                        </tr>
+                          
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="form-group mt-3 mb-3 text-center">
+                    <button  type="submit" class="btn">Update</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<%- include('../partition/footer.ejs') %>

@@ -1,0 +1,114 @@
+<%- include('../partition/header.ejs') %>
+
+  <!-- banner section -->
+    <section class="banner">
+      <div class="container-fluid">
+              <div class="row">
+                  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button> 
+                        </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                          <img src="/assets/image/slider1.jpeg" class="d-block w-100" alt="...">
+                          <div class="text-start carousel-caption">
+                              <!-- <h1>WELCOME TO<br>BOOK CORNER</h1>
+                              <a href="" class="btn">Shop Now</a> -->
+                          </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                          <img src="/assets/image/slider2.jpg" class="d-block w-100" alt="...">
+                          <div class="text-start carousel-caption">
+                              <!-- <h1>Merry <br> Christmas</h1>
+                              <h3>PNinfosys Gwalior</h3>
+                              <p>Flat 20% off on all christmas accessories on your first purchase.</p> -->
+                              <!-- <a href="" class="btn">Shop Now</a> -->
+                          </div>
+                        </div> 
+                      </div> 
+                    </div>
+              </div>
+          </div>
+    </section>
+    <!-- banner section end -->
+
+  <section class="available-course">
+    <div class="container-fluid">
+      <div class="container mt-5 mb-5">
+        <h1 class="text-center">Available Courses</h1>
+        <div class="row mt-3">
+          <div class="col-md-4 text-center px-3 py-3 " >
+            <div class="course shadow-lg">
+              <img src="/assets/image/btech.jpg" class="d-block w-100">
+              
+              <% if(d1) {%>
+              <a href="/display"><button class="btn mt-3">Display</button></a>
+              <% } else{ %>
+              <a href="/btech_register"><button class="btn mt-3">Register</button></a>
+              <% } %>
+            </div>
+          </div>
+          <div class="col-md-4 text-center px-3 py-3 " >
+            <div class="course shadow-lg">
+            <img src="/assets/image/bca.jpg" class="d-block w-100">
+              
+              <% if(d2) {%>
+                <a href="/display"><button class="btn mt-3">Display</button></a>
+              <% } else{ %>
+                <a href="/bca_register"><button class="btn mt-3">Register</button></a>
+              <% } %>
+              
+            </div>
+          </div>
+          <div class="col-md-4 text-center px-3 py-3 " >
+            <div class="course shadow-lg">
+            <img src="/assets/image/bba.jpg" class="d-block w-100">
+              
+              <% if(d3) {%>
+                <a href="/display"><button class="btn mt-3">Display</button></a>
+              <% } else{ %>
+                <a href="/bba_register"><button class="btn mt-3">Register</button></a>
+              <% } %>
+            </div>
+          </div>
+          <!-- <div class="col-md-4 text-center px-3 py-3 " >
+            <div class="course shadow-lg">
+            <img src="/assets/image/mtech.jpg" class="d-block w-100">
+              
+              <% if(d1) {%>
+                <a href="/display"><button class="btn mt-3">Display</button></a>
+              <% } else{ %>
+                <a href="/register"><button class="btn mt-3">Register</button></a>
+              <% } %>
+            </div>
+          </div>
+          <div class="col-md-4 text-center px-3 py-3 " >
+            <div class="course shadow-lg">
+            <img src="/assets/image/mca.jpg" class="d-block w-100">
+              
+              <% if(d1) {%>
+                <a href="/display"><button class="btn mt-3">Display</button></a>
+              <% } else{ %>
+                <a href="/register"><button class="btn mt-3">Register</button></a>
+              <% } %>
+            </div>
+          </div>
+          <div class="col-md-4 text-center px-3 py-3 " >
+            <div class="course shadow-lg">
+            <img src="/assets/image/mba.webp" class="d-block w-100">
+              
+              <% if(d1) {%>
+                <a href="/display"><button class="btn mt-3">Display</button></a>
+              <% } else{ %>
+                <a href="/register"><button class="btn mt-3">Register</button></a>
+              <% } %>
+            </div>
+          </div> -->
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+<%- include('../partition/footer.ejs') %>

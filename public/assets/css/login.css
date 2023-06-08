@@ -1,0 +1,15 @@
+body .login{
+    background:linear-gradient(to left,rgba(0,0,0,0.4) , rgba(0,0,0,0.6)) , url(../image/banner1234.jpg);
+    background-size: cover;
+     
+}
+.login-box{
+    padding: 30px 50px;
+    background-color: #ffffff8f;
+}
+.login .btn{
+    text-decoration: none;
+    color: white !important;
+    background-color: #cd2122; 
+    border-color: #cd2122;
+}

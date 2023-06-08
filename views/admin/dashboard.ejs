@@ -1,0 +1,46 @@
+<%- include('../partition/admin_header.ejs') %>
+
+<section>
+  <div class="container-fluid mt-5">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-md-3 admin-menu list-group py-5">
+          <a
+            href="/admin/dasboard"
+            class="list-group-item list-group-item-action active"
+            aria-current="true"
+            >Dashboard
+          </a>
+
+          <a href="/admin/enrolled_students" class="list-group-item list-group-item-action"
+            >Enrolled Students</a
+          >
+          <a
+            class="nav-link dropdown-toggle list-group-item list-group-item-action"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Applications
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="/admin/pending_applications">Pending Applications</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="/admin/rejected_applications">Rejected Applications</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-9 py-5">
+          <h1>Welcome, <%= n %></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partition/admin_footer.ejs') %>

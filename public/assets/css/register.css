@@ -1,0 +1,21 @@
+.registration{
+	background:linear-gradient(to left,rgba(0,0,0,0.4) , rgba(0,0,0,0.6)) , url(../image/registration-banner.png);
+    background-size: cover;
+}
+.registration h1{
+	color: white;
+}
+
+.registration-box{
+    padding: 30px 50px;
+    background-color: #ffffff8f;
+}
+.selectsize{
+	width: 180px;
+}
+.form-control{
+    display: initial;
+}
+label{
+    font-weight: 500;
+}

@@ -1,0 +1,95 @@
+<%- include('../partition/header.ejs') %>
+
+<section class="display">
+    <div class="container-fluid">
+      <div class="container mt-5">
+        <div class="row justify-content-center mt-5 py-5 px-5">
+          <div class="col-md-8 shadow-lg display-box px-5">
+            <h1 class="text-center mt-3">Registration Details</h1>
+              <table class="table mt-5 ">
+                <% data.forEach((a)=>{ %>
+                <tr > 
+                  <th>Image :</th>
+                  <td><img src="/upload/<%= a.image %>" class="img"></td>
+                </tr>
+                <tr>
+                  <th>Name :</th>
+                  <td><%= a.name %></td>
+                </tr>
+                <tr>
+                  <th>Mobile :</th>
+                  <td><%= a.phone %></td>
+                </tr>
+                <tr>
+                  <th>Email :</th>
+                  <td><%= a.email   %></td>
+                </tr> 
+                <tr>
+                  <th>Date of Birth :</th>
+                  <td><%= a.dob   %></td>
+                </tr>
+                <tr>
+                  <th>Gender :</th>
+                  <td><%= a.gender %></td>
+                </tr>
+                <tr>
+                  <th>Address :</th>
+                  <td><%= a.address %></td>
+                </tr>
+                <tr>
+                  <th>Course :</th>
+                  <td><%= a.course %></td>
+                </tr>
+                <tr>
+                  <th>Specialization :</th>
+                  <td><%= a.specialization %></td>
+                </tr>
+                <tr>
+                  <table class="table text-center mt-3">
+                    <thead>
+                      <tr>
+                        <th  style="width: 10%;">Course</th>
+                        <th  style="width: 20%;">Pass Year</th>
+                        <th  style="width: 30%;">School/ College</th>
+                        <th  style="width: 30%;">Board/ University</th>
+                        <th  style="width: 10%;">Percentage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>10th*</td>
+                        <td><%= a.year_10th %></td>
+                        <td><%= a.school_10th %></td>
+                        <td><%= a.board_10th %></td>
+                        <td><%= a.percentage_10th %></td>
+                      </tr>
+                      <tr>
+                        <td>12th*</td>
+                        <td><%= a.year_12th %></td>
+                        <td><%= a.school_12th %></td>
+                        <td><%= a.board_12th %></td>
+                        <td><%= a.percentage_12th %></td>
+                      </tr>
+                      <tr>
+                        <td>Graduation</td>
+                        <td><%= a.graduation_year %></td>
+                        <td><%= a.graduation_school %></td>
+                        <td><%= a.graduation_board %></td>
+                        <td><%= a.graduation_percentage %></td>
+                      </tr>    
+                    </tbody>
+                  </table>
+                </tr>
+              </table>
+              <div class="form-group mt-3 mb-3 text-center">
+                <a href="/edit_detail/<%= a._id %>" class="btn">Edit</a>
+              </div>
+              <%  }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<%- include('../partition/footer.ejs') %>
